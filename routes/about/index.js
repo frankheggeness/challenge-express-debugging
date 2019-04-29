@@ -3,4 +3,8 @@ const router = express.Router();
 
 const get = require('./get');
 
-router.get('/about', get);
+router.get('/', (req, res) => {
+  res.render('./about');
+});
+
+module.exports = router;
